@@ -141,4 +141,101 @@ header .btn-group {
   gap: 30px;
 }
 
-/* ####  */
+/* ####  main-title #### */
+
+/* ####  footer #### */
+footer {
+  background: #171717;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer .container {
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+footer .footer-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-menu {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+footer h1 img {
+  height: 20px;
+}
+
+footer .footer-menu-list {
+  display: flex;
+  gap: 30px;
+}
+
+footer .footer-menu-list a {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+footer .footer-menu-list li:first-child a {
+  color: #fff;
+  font-weight: 700;
+}
+
+footer .link-box {
+  display: flex;
+  gap: 30px;
+  color: #fff;
+}
+
+footer .link-box .link-depth1 {
+  width: 180px;
+  height: 45px;
+}
+
+footer .link-box .link-depth1 > li {
+  background: #000;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 30px;
+  border-radius: 25px;
+  position: relative;
+}
+
+footer .link-box a {
+  color: #fff;
+}
+
+footer .link-box .link-depth2 {
+  width: 100%;
+  display: none;
+}
+
+footer .link-box .link-depth2 li {
+  margin: 10px 20px 10px 30px;
+}
+
+footer .link-box .link-depth2 li a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer .link-box .link-depth2 li a:hover {
+  color: #fff;
+}
+
+footer .link-box .link-depth2.show {
+  display: block;
+  position: absolute;
+  bottom: 47px;
+  left: 0;
+  background: #000;
+  border-radius: 25px;
+}
