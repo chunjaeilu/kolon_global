@@ -1,4 +1,19 @@
 /* style.css */
+
+/* :::: page 구분 :::: */
+/* #### section 구분 #### */
+/* **** 주요기능 구분 **** */
+
+/* #### 웹폰트 #### */
+/* **** Manrope **** */
+/* font-family: 'Manrope', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+/* **** Noto Sans KR **** */
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+/* #### reset #### */
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +26,33 @@ ul {
 
 a {
   text-decoration: none;
+  color: #000;
+}
+
+/* #### 기본 스타일 #### */
+:root {
+  --kolon-blue: #0078c3;
+  --light-blue: #00afe6;
+  --text-light: #666;
+}
+
+body {
+  font-family: "Manrope", "Noto Sans KR", sans-serif;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  outline: 1px solid #ccc;
+}
+
+/* **** 가로스크롤 없애기 **** */
+body {
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
