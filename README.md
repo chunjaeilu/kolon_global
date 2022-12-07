@@ -1,6 +1,6 @@
 # kolon_global
 22.12.5(월) ~
-
+기존 사이트 : http://kolonglobal.com/main.asp
 URL : https://chunjaeilu.github.io/kolon_global/
 
 ## 개인과제 :: 홈페이지 리뉴얼_02
