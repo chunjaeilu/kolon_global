@@ -76,7 +76,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.97);
+  background: #fff;
   border-bottom: 0.2px solid #ddd;
 }
 
@@ -145,7 +145,7 @@ header .gnb .depth1 > li:hover > a {
 }
 
 header .gnb .depth1 > li:hover .depth2 {
-  background: #f1f1f1;
+  background: #f7f7f7;
 }
 
 header .gnb .depth2 li:hover a {
@@ -157,7 +157,7 @@ header .gnb .depth1::after {
   content: "";
   width: 100vw;
   height: 0;
-  background: rgba(255, 255, 255, 0.97);
+  background: #fff;
   position: absolute;
   left: 0;
   top: 80px;
