@@ -44,7 +44,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  /* outline: 1px solid #ccc; */
+  outline: 1px solid #ccc;
 }
 
 /* **** 가로스크롤 없애기 **** */
