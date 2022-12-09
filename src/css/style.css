@@ -48,11 +48,14 @@ body {
 }
 
 /* **** 가로스크롤 없애기 **** */
+/* IE and Edge */
+/* Firefox */
 body {
   overflow-x: hidden;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+/* Chrome, Safari, Opera */
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }

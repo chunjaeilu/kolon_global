@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,12 +31,7 @@
     <link
       rel="stylesheet"
       href="./src/css/main.css"
-      media="screen and (min-width: 1280px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./src/css/main-web-sm.css"
-      media="screen and (max-width: 1279px) and (min-width: 1024px)"
+      media="screen and (min-width: 1024px)"
     />
     <link
       rel="stylesheet"
@@ -65,10 +60,15 @@
         <nav class="gnb">
           <ul class="depth1">
             <li>
-              <a href="#">회사소개</a>
+              <a href="./pages/sub1-1.html"
+                >회사소개<img
+                  class="mob-only"
+                  src="./src/images/arrow-dropdown-icon-black.svg"
+                  alt="dropdown"
+              /></a>
               <ul class="depth2">
                 <li>
-                  <a href="#">코오롱글로벌</a>
+                  <a href="./pages/sub1-1.html">코오롱글로벌</a>
                 </li>
                 <li>
                   <a href="#">CEO 인사말</a>
@@ -88,7 +88,12 @@
               </ul>
             </li>
             <li>
-              <a href="#">사업분야</a>
+              <a href="#"
+                >사업분야<img
+                  class="mob-only"
+                  src="./src/images/arrow-dropdown-icon-black.svg"
+                  alt="dropdown"
+              /></a>
               <ul class="depth2">
                 <li>
                   <a href="#">무역사업부</a>
@@ -105,7 +110,12 @@
               </ul>
             </li>
             <li>
-              <a href="#">홍보센터</a>
+              <a href="#"
+                >홍보센터<img
+                  class="mob-only"
+                  src="./src/images/arrow-dropdown-icon-black.svg"
+                  alt="dropdown"
+              /></a>
               <ul class="depth2">
                 <li>
                   <a href="#">공지 및 뉴스</a>
@@ -125,7 +135,12 @@
               </ul>
             </li>
             <li>
-              <a href="#">인재채용</a>
+              <a href="#"
+                >인재채용<img
+                  class="mob-only"
+                  src="./src/images/arrow-dropdown-icon-black.svg"
+                  alt="dropdown"
+              /></a>
               <ul class="depth2">
                 <li>
                   <a href="#">인재상</a>
@@ -139,7 +154,12 @@
               </ul>
             </li>
             <li>
-              <a href="#">협력업체</a>
+              <a href="#"
+                >협력업체<img
+                  class="mob-only"
+                  src="./src/images/arrow-dropdown-icon-black.svg"
+                  alt="dropdown"
+              /></a>
               <ul class="depth2">
                 <li>
                   <a href="#">결제조회</a>
@@ -156,6 +176,13 @@
             ><img src="./src/images/global-icon.svg" alt="한글/영어"
           /></a>
           <a href="#"><img src="./src/images/search-icon.svg" alt="검색" /></a>
+          <a href="#"
+            ><img
+              id="btn-gnb-toggle"
+              class="web-none"
+              src="./src/images/toggle-menu.svg"
+              alt="사이트맵 토글"
+          /></a>
         </div>
       </div>
     </header>
@@ -167,12 +194,11 @@
         <div class="container">
           <div class="title-text">
             <h1>One & Only</h1>
-            <p class="mob-none">
-              세상에 없던 새로운 혁신을 위해 코오롱글로벌은 오늘도 한계에
-              도전합니다
+            <p>
+              세상에 없던 새로운 혁신을 위해 <br class="mob-only" />
+              코오롱글로벌은 오늘도 한계에 도전합니다
             </p>
           </div>
-          <img src="./src/images/main-title.jpg" alt="메인타이틀" />
         </div>
       </section>
       <!-- // main-title -->
@@ -182,12 +208,13 @@
           <div class="sec-title">
             <h2>
               <span class="bg-blue"
-                >지속가능한 미래를 창조하는 Green Pioneer!</span
+                >지속가능한 미래를 창조하는 <br class="mob-only" />
+                Green Pioneer!</span
               >
             </h2>
             <p>
               <span>기본과 정도</span>, 코오롱 70년 경영의 가장 근간이 되는 이
-              원칙은 <br />
+              원칙은 <br class="mob-none" />
               코오롱글로벌의 미래 성장동력이자 우리가 반드시 실현해야 할 사회적
               책임입니다.
             </p>
@@ -274,7 +301,7 @@
               <h3>무역사업부</h3>
               <p class="hidden kf-next-slide">
                 철강, 화학 등으로 구축한 글로벌 네트워크를 바탕으로 산업,
-                군수물자부터 트랜디한 생활가전 아이템 까지 다방면으로 성장을
+                군수물자부터 트렌디한 생활가전 아이템 까지 다방면으로 성장을
                 확대하고 있습니다.
               </p>
               <a class="hidden kf-next-slide btn-link" href="#"
@@ -521,11 +548,13 @@
       <div class="container">
         <div class="footer-box">
           <div class="footer-menu">
-            <h1>
-              <a href="./index.html"
-                ><img src="./src/images/logo_white_en.svg" alt="코오롱글로벌"
-              /></a>
-            </h1>
+            <a href="./index.html"
+              ><img
+                class="footer-logo"
+                src="./src/images/logo_white_en.svg"
+                alt="코오롱글로벌"
+            /></a>
+
             <ul class="footer-menu-list">
               <li><a href="#">개인정보 처리방침</a></li>
               <li><a href="#">윤리경영</a></li>
@@ -568,7 +597,8 @@
         </div>
         <div class="footer-box">
           <p class="copyright">
-            Copyright ⓒ 2022 Kolon Global Corp. All Rights Reserved.
+            Copyright ⓒ 2022 Kolon Global Corp. <br class="mob-only" />
+            All Rights Reserved.
           </p>
           <div class="sns-box">
             <a href="#">
