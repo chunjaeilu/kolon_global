@@ -15,7 +15,7 @@
 
 /* **** font size **** */
 h1 {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 700;
 }
 
@@ -53,6 +53,7 @@ section {
   text-align: center;
   margin-bottom: 20px;
   word-break: keep-all;
+  opacity: 0;
 }
 
 .sec-title .bg-blue {
@@ -229,18 +230,17 @@ header .gnb.show {
 }
 
 /* ######## sub-title ######## */
-.sub-title .container {
-  padding: 0 20px;
-}
+/* .sub-title .container {
+} */
 
 .sub-title h1 {
-  padding: 15px 0 50px;
+  padding: 15px 20px 50px;
   animation: slide-up 1s ease forwards;
 }
 
 .sub-title .sub-title-img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   position: relative;
 }
 .sub-title .sub-title-img::after {
@@ -251,6 +251,7 @@ header .gnb.show {
   position: absolute;
   top: -30px;
   right: 30px;
+  animation: slide-up 1s ease forwards;
 }
 
 .sub-title .sub-title-img img {
@@ -374,6 +375,80 @@ footer .sns-box img {
   width: 20px;
 }
 
+/* **** 애니메이션 키프레임 **** */
+.mob-slide-up {
+  animation: slide-up 1s ease forwards;
+}
+.mob-slide-left {
+  animation: slide-left 1s ease forwards;
+}
+.mob-slide-right {
+  animation: slide-right 1s ease forwards;
+}
+
+.mob-scale-sm {
+  animation: scale-sm 1s ease forwards;
+}
+
+.mob-opacity {
+  animation: opacity 1s ease forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-sm {
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* #### page 개별 스타일 #### */
 
 /* :::: sub1-1 :::: */
@@ -383,9 +458,14 @@ footer .sns-box img {
   padding: 0 20px;
 }
 
+#sub1-1 .section1 h2 {
+  animation: slide-up 1s ease forwards;
+}
+
 #sub1-1 .section1 .merger-img {
   text-align: center;
   padding-bottom: 50px;
+  opacity: 0;
 }
 
 #sub1-1 .section1 .merger-img img {
@@ -429,6 +509,7 @@ footer .sns-box img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
 }
 
 #sub1-1 .section2 .bl-box .text-box h4 {
@@ -442,7 +523,121 @@ footer .sns-box img {
 
 #sub1-1 .section2 .bl-box .text-box p {
   color: var(--text-light);
-  word-break: keep-all;
   line-height: 1.8em;
   font-size: 14px;
+}
+
+/* :::: sub1-3 :::: */
+/* #### section1 #### */
+#sub1-3 .section1 .container {
+  padding: 0 20px;
+}
+
+#sub1-3 .section1 h2 {
+  animation: slide-up 1s ease forwards;
+}
+
+#sub1-3 .section1 .ph-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+#sub1-3 .section1 .ph-list li {
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  opacity: 0;
+}
+
+#sub1-3 .section1 .ph-list li:first-child {
+  background: #800080;
+}
+#sub1-3 .section1 .ph-list li:nth-child(2) {
+  background: var(--kolon-blue);
+}
+#sub1-3 .section1 .ph-list li:last-child {
+  background: #c39e53;
+}
+
+#sub1-3 .section1 .ph-list li h3 {
+  font-size: 22px;
+}
+
+#sub1-3 .section1 .ph-list li p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#sub1-3 .section1 .ph-list li img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+}
+
+/* #### section2 #### */
+#sub1-3 .section2 .container {
+  padding: 0 20px;
+}
+
+#sub1-3 .section2 .esg-img {
+  text-align: center;
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+#sub1-3 .section2 .esg-img img {
+  width: 100%;
+}
+
+#sub1-3 .section2 .esg-act {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#sub1-3 .section2 .act-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#sub1-3 .section2 .contents {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#sub1-3 .section2 .content {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+#sub1-3 .section2 .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#sub1-3 .section2 .content .text-box {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+}
+
+#sub1-3 .section2 .content .text-box p {
+  color: #ddd;
+  margin-top: 10px;
 }

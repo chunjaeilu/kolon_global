@@ -52,6 +52,7 @@ section {
   display: block;
   text-align: center;
   margin-bottom: 20px;
+  opacity: 0;
 }
 
 .sec-title .bg-blue {
@@ -228,6 +229,7 @@ header .btn-group {
   position: absolute;
   top: -60px;
   right: 60px;
+  animation: slide-up 1s ease forwards;
 }
 
 .sub-title .sub-title-img img {
@@ -339,6 +341,82 @@ footer .sns-box {
   gap: 10px;
 }
 
+/* **** 애니메이션 키프레임 **** */
+.slide-up {
+  animation: slide-up 1s ease forwards;
+}
+
+.slide-left {
+  animation: slide-left 1s ease forwards;
+}
+
+.slide-right {
+  animation: slide-right 1s ease forwards;
+}
+
+.scale-sm {
+  animation: scale-sm 1s ease forwards;
+}
+
+.opacity {
+  animation: opacity 1s ease forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-sm {
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* #### page 개별 스타일 #### */
 
 /* :::: sub1-1 :::: */
@@ -348,13 +426,19 @@ footer .sns-box {
   padding: 0 40px;
 }
 
+#sub1-1 .section1 h2 {
+  animation: slide-up 1s ease forwards;
+}
+
 #sub1-1 .section1 .merger-img {
   text-align: center;
   padding-bottom: 100px;
+  opacity: 0;
 }
 
-#sub1-1 .section1 .merger-img img {
-  width: 500px;
+#sub1-1 .section1 .merger-img {
+  text-align: center;
+  padding-bottom: 100px;
 }
 
 /* #### section2 #### */
@@ -388,6 +472,7 @@ footer .sns-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
 }
 
 #sub1-1 .section2 .bl-box .text-box h4 {
@@ -402,4 +487,116 @@ footer .sns-box {
   color: var(--text-light);
   word-break: keep-all;
   line-height: 1.8em;
+}
+
+/* :::: sub1-3 :::: */
+/* #### section1 #### */
+#sub1-3 .section1 .container {
+  padding: 0 40px;
+}
+
+#sub1-3 .section1 h2 {
+  animation: slide-up 1s ease forwards;
+}
+
+#sub1-3 .section1 .ph-list {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#sub1-3 .section1 .ph-list li {
+  flex: 1;
+  max-width: 470px;
+  height: 100%;
+  color: #fff;
+  padding: 35px;
+  position: relative;
+  opacity: 0;
+}
+
+#sub1-3 .section1 .ph-list li:first-child {
+  background: #800080;
+}
+#sub1-3 .section1 .ph-list li:nth-child(2) {
+  background: var(--kolon-blue);
+}
+#sub1-3 .section1 .ph-list li:last-child {
+  background: #c39e53;
+}
+
+#sub1-3 .section1 .ph-list li h3 {
+  font-size: 35px;
+}
+
+#sub1-3 .section1 .ph-list li p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#sub1-3 .section1 .ph-list li img {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  width: 80px;
+}
+
+/* #### section2 #### */
+#sub1-3 .section2 .container {
+  padding: 0 40px;
+  max-width: 1440px;
+}
+
+#sub1-3 .section2 .esg-img {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#sub1-3 .section2 .esg-act {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#sub1-3 .section2 .act-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#sub1-3 .section2 .contents {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  gap: 20px;
+}
+
+#sub1-3 .section2 .content {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+#sub1-3 .section2 .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#sub1-3 .section2 .content .text-box {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+}
+
+#sub1-3 .section2 .content .text-box p {
+  color: #ddd;
+  margin-top: 10px;
 }
