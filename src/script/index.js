@@ -40,6 +40,32 @@ $(function () {
     });
   });
 
+  /* section2 모바일 슬라이더 */
+  let mob_width = 100;
+  $(".section2 .slide-btn button").on("click", function () {
+    num = $(this).index();
+    x = num * mob_width;
+    $(".section2 .bl-list").css("transform", `translateX(${-x}vw)`);
+    $(".section2 .slide-btn button").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  /* section3 모바일 슬라이더 */
+  let xEl = "0"; // 슬라이더 x축 좌표 초기값
+  $(".section3 .btn-box .news-prev").on("click", function () {
+    if (xEl <= 0) return;
+    xEl--;
+    console.log(xEl);
+    $(".section3 .news-list").css("transform", `translateX(-${xEl * 75}vw)`);
+  });
+
+  $(".section3 .btn-box .news-next").on("click", function () {
+    if (xEl >= 3) return;
+    xEl++;
+    console.log(xEl);
+    $(".section3 .news-list").css("transform", `translateX(-${xEl * 75}vw)`);
+  });
+
   /* footer link-box 클릭 >> 목록 노출 */
   $("footer .link-box .link-depth1 > li").on("click", function () {
     $(this).children(".link-depth2").toggleClass("show");
