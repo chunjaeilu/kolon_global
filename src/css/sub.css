@@ -229,7 +229,7 @@ header .btn-group {
   position: absolute;
   top: -60px;
   right: 60px;
-  animation: slide-up 1s ease forwards;
+  animation: slide-right 1s ease forwards;
 }
 
 .sub-title .sub-title-img img {

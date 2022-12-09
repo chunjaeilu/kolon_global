@@ -251,7 +251,7 @@ header .gnb.show {
   position: absolute;
   top: -30px;
   right: 30px;
-  animation: slide-up 1s ease forwards;
+  animation: slide-right 1s ease forwards;
 }
 
 .sub-title .sub-title-img img {
