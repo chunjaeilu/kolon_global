@@ -548,7 +548,7 @@ footer .sns-box img {
 #sub1-3 .section1 .ph-list li {
   width: 100%;
   color: #fff;
-  padding: 20px;
+  padding: 35px 20px;
   position: relative;
   opacity: 0;
 }
@@ -574,7 +574,7 @@ footer .sns-box img {
 
 #sub1-3 .section1 .ph-list li img {
   position: absolute;
-  bottom: 20px;
+  bottom: 35px;
   right: 20px;
   width: 50px;
 }
