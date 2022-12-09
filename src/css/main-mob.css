@@ -1,4 +1,4 @@
-/* main.css */
+/* main-mob.css */
 
 @import url(./style.css);
 
@@ -561,7 +561,7 @@ header .gnb.show {
   align-items: center;
   /* margin: 0 auto; */
   position: absolute;
-  top: 242px;
+  bottom: 0;
   left: calc(50%);
   transform: translateX(-50%);
   /* outline: 1px solid red; */
