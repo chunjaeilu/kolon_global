@@ -1,13 +1,15 @@
 # kolon_global
+
 22.12.5(월) ~
 
 기존 사이트 : http://kolonglobal.com/main.asp
 
 URL : https://chunjaeilu.github.io/kolon_global/
 
-## 개인과제 :: 홈페이지 리뉴얼_02
+## 개인과제 :: 홈페이지 리뉴얼\_02
 
 #### 프로젝트 과제
+
 - 기존 홈페이지 리뉴얼
 - 1차 팀 프로젝트 자료를 활용, 자유롭게 주제를 변경하여 개인프로젝트 진행
 - 개발일정 : 1주일
@@ -21,12 +23,15 @@ URL : https://chunjaeilu.github.io/kolon_global/
   - 프로젝트 상세 도큐먼트 개시 (깃허브)
   - SEO 최적화 meta코드 및 오픈그래프 추가
   - 웹아이콘(Favicon) 및 대표이미지 추가
+
 #### 활용언어
+
 - HTML
 - CSS
 - JavaScript (jQuery)
 
 #### Time Table
+
 - 22.12.5(월)
   - 사이트 선정 및 분석
   - 디자인 시안 기초작업
@@ -40,8 +45,11 @@ URL : https://chunjaeilu.github.io/kolon_global/
 - 22.12.9(금)
   - 메인, 서브1-1, 서브1-3 구현 (web, mob)
   - 1차 제출
+
 ---
+
 #### 주요 구현기능
+
 - 공통
   - web, mob 규격에 맞는 레이아웃 변경
 - 메인페이지
@@ -54,4 +62,5 @@ URL : https://chunjaeilu.github.io/kolon_global/
   - 스크롤 반응 애니메이션
 
 #### 미구현 (추후 수정계획)
+
 - section4 주가정보 데이터 받아서 화면에 노출
