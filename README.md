@@ -6,7 +6,7 @@
 
 URL : https://chunjaeilu.github.io/kolon_global/
 
-## 개인과제 :: 홈페이지 리뉴얼\_02
+## 개인과제 :: 홈페이지 리뉴얼_02
 
 #### 프로젝트 과제
 
