@@ -96,6 +96,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: visible;
 }
 
 header h1 {

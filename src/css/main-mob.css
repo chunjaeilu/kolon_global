@@ -150,6 +150,16 @@ header .gnb .depth2 a {
 }
 
 /* **** gnb 호버효과 **** */
+header .gnb .depth1 > li:hover > a {
+  color: var(--kolon-blue);
+  font-weight: 700;
+}
+
+header .gnb .depth1 > li.active > a {
+  color: var(--kolon-blue);
+  font-weight: 700;
+}
+
 header .gnb .depth2 {
   max-height: 0;
   opacity: 0;
@@ -157,18 +167,10 @@ header .gnb .depth2 {
   transition: 0.5s;
 }
 
-header .gnb .depth1 > li:hover .depth2 {
+header .gnb .depth1 > li.active > .depth2 {
   max-height: 280px;
-  opacity: 1;
-}
-
-header .gnb .depth1 > li:hover > a {
-  color: var(--kolon-blue);
-  font-weight: 700;
-}
-
-header .gnb .depth1 > li:hover .depth2 {
   background: #f7f7f7;
+  opacity: 1;
 }
 
 header .gnb .depth2 li:hover a {
@@ -209,6 +211,7 @@ header .gnb.show {
   background-size: cover;
   background-position: top;
   transition: 0.5s;
+  overflow: hidden;
 }
 
 .main-title .title-text {
@@ -228,38 +231,28 @@ header .gnb.show {
   position: relative;
 }
 
-.main-title .title-text h1::before {
-  content: "";
-  width: 100vw;
-  height: 5px;
-  background: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 00px;
-}
-.main-title .title-text h1::after {
-  content: "";
-  width: 100vw;
-  height: 5px;
-  background: #f5911e;
-  position: absolute;
-  bottom: 0;
-  left: 00px;
-  animation: title-line 5s linear infinite;
+.main-title .title-text progress {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-@keyframes title-line {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100vw;
-  }
+.main-title .title-text progress::-webkit-progress-bar {
+  width: 100vw;
+  position: relative;
+  top: -10px;
+  left: 0px;
+  height: 6px;
+  background-color: #fff;
+}
+
+progress::-webkit-progress-value {
+  background-color: #f5911e;
 }
 
 .main-title .title-text p {
   font-size: 16px;
   font-weight: 500;
+  margin-top: -15px;
 }
 
 .main-title img {
@@ -292,7 +285,7 @@ header .gnb.show {
 }
 
 .section1 .esg-management .content {
-  width: 100vw;
+  width: calc(100vw - 40px);
   height: calc(100vw * 0.8);
   /* border-radius: 50%; */
   background-size: cover;
@@ -435,12 +428,12 @@ header .gnb.show {
   width: 100vw;
   height: 80vh;
   position: relative;
+  overflow: hidden;
 }
 
 .section2 .bl-list {
   width: 400vw;
   height: 80vh;
-  overflow: hidden;
   display: flex;
   transition: 0.5s;
 }
@@ -553,7 +546,7 @@ header .gnb.show {
   position: relative;
 }
 
-.section3 .btn-box {
+.section3 .btn-box.mob-only {
   width: 90vw;
   height: 500px;
   display: flex;

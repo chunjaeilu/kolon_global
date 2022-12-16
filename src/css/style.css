@@ -50,12 +50,12 @@ body {
 /* **** 가로스크롤 없애기 **** */
 /* IE and Edge */
 /* Firefox */
-body {
+/* body {
   overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+} */
 /* Chrome, Safari, Opera */
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */

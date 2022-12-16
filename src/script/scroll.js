@@ -6,7 +6,7 @@ $(function () {
 
     /* :::: sub1-1 :::: */
     if (scrollY >= 300) {
-      $("#sub1-1 .section1 .merger-img").addClass("scale-sm");
+      $("#sub1-1 .section1 .merger-img").addClass("opacity");
     }
     if (scrollY >= 1000) {
       $("#sub1-1 .section2 h2").addClass("slide-up");

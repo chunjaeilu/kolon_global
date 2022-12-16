@@ -89,6 +89,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: visible;
 }
 
 header h1 {
@@ -188,7 +189,8 @@ header .btn-group {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  transition: 0.5s;
+  transition: 0.7s;
+  overflow: hidden;
 }
 
 .main-title .title-text {
@@ -208,38 +210,28 @@ header .btn-group {
   position: relative;
 }
 
-.main-title .title-text h1::before {
-  content: "";
-  width: 100vw;
-  height: 6px;
-  background: #fff;
-  position: absolute;
-  bottom: 0;
-  left: -80px;
-}
-.main-title .title-text h1::after {
-  content: "";
-  width: 100vw;
-  height: 6px;
-  background: #f5911e;
-  position: absolute;
-  bottom: 0;
-  left: -80px;
-  animation: title-line 5s linear infinite;
+.main-title .title-text progress {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-@keyframes title-line {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100vw;
-  }
+.main-title .title-text progress::-webkit-progress-bar {
+  width: 100vw;
+  position: relative;
+  top: -20px;
+  left: -80px;
+  height: 6px;
+  background-color: #fff;
+}
+
+progress::-webkit-progress-value {
+  background-color: #f5911e;
 }
 
 .main-title .title-text p {
   font-size: 22px;
   font-weight: 700;
+  margin-top: -20px;
 }
 
 /* #### section1 #### */
@@ -258,10 +250,6 @@ header .btn-group {
 .section1 .esg-management {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
   align-items: center;
 }
 
@@ -273,6 +261,7 @@ header .btn-group {
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -280,8 +269,8 @@ header .btn-group {
 
 .section1 .esg-management .esg-e {
   background-image: linear-gradient(
-      rgba(10, 183, 6, 0.8),
-      rgba(10, 183, 6, 0.8)
+      rgba(10, 183, 6, 0.2),
+      rgba(10, 183, 6, 0.2)
     ),
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/section1-img1.jpg);
@@ -289,8 +278,8 @@ header .btn-group {
 
 .section1 .esg-management .esg-s {
   background-image: linear-gradient(
-      rgba(245, 145, 30, 0.8),
-      rgba(245, 145, 30, 0.8)
+      rgba(245, 145, 30, 0.2),
+      rgba(245, 145, 30, 0.2)
     ),
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/section1-img2.jpg);
@@ -298,8 +287,8 @@ header .btn-group {
 
 .section1 .esg-management .esg-g {
   background-image: linear-gradient(
-      rgba(0, 175, 230, 0.8),
-      rgba(0, 175, 230, 0.8)
+      rgba(0, 175, 230, 0.2),
+      rgba(0, 175, 230, 0.2)
     ),
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/section1-img3.jpg);
@@ -329,16 +318,29 @@ header .btn-group {
   color: #fff;
 }
 
+.section1 .esg-management .content p {
+  color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+  opacity: 0;
+}
+
 .section1 .esg-management .contents-box {
   display: flex;
   gap: 50px;
 }
 
 /* **** content 호버 효과 **** */
+.section1 .esg-management .content:hover p {
+  max-height: 100px;
+  opacity: 1;
+}
+
 .section1 .esg-management .esg-e:hover {
   background-image: linear-gradient(
-      rgba(10, 183, 6, 0.1),
-      rgba(10, 183, 6, 0.1)
+      rgba(10, 183, 6, 0.8),
+      rgba(10, 183, 6, 0.8)
     ),
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/section1-img1.jpg);
@@ -346,8 +348,8 @@ header .btn-group {
 
 .section1 .esg-management .esg-s:hover {
   background-image: linear-gradient(
-      rgba(245, 145, 30, 0.1),
-      rgba(245, 145, 30, 0.1)
+      rgba(245, 145, 30, 0.8),
+      rgba(245, 145, 30, 0.8)
     ),
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/section1-img2.jpg);
@@ -355,121 +357,11 @@ header .btn-group {
 
 .section1 .esg-management .esg-g:hover {
   background-image: linear-gradient(
-      rgba(0, 175, 230, 0.1),
-      rgba(0, 175, 230, 0.1)
+      rgba(0, 175, 230, 0.8),
+      rgba(0, 175, 230, 0.8)
     ),
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/section1-img3.jpg);
-}
-
-.section1 .esg-management .esg-act-list {
-  position: absolute;
-}
-
-.section1 .esg-management .act-e {
-  width: 740px;
-  padding-left: 170px;
-  border-top: 0.5px solid #bebebe;
-  left: 140px;
-  top: 0;
-}
-
-.section1 .esg-management .act-e::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background: #fff;
-  border: 5px solid #bebebe;
-  border-radius: 50%;
-  position: absolute;
-  top: -12px;
-  left: -12px;
-}
-
-.section1 .esg-management .act-s {
-  width: 600px;
-  padding-right: 50px;
-  border-bottom: 0.5px solid #bebebe;
-  right: 140px;
-  bottom: 279px;
-  padding-bottom: 10px;
-}
-
-.section1 .esg-management .act-s::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background: #fff;
-  border: 5px solid #bebebe;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -12px;
-  right: -12px;
-}
-
-.section1 .esg-management .act-g {
-  width: 600px;
-  padding-left: 30px;
-  border-bottom: 0.5px solid #bebebe;
-  left: 140px;
-  bottom: 279px;
-  padding-bottom: 10px;
-}
-
-.section1 .esg-management .act-g::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background: #fff;
-  border: 5px solid #bebebe;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -12px;
-  left: -12px;
-}
-
-.section1 .esg-management .esg-act-list dt {
-  font-weight: 700;
-  margin-top: 10px;
-}
-
-.section1 .esg-management .esg-act-list dd {
-  font-size: 14px;
-  color: var(--text-light);
-  line-height: 1.8em;
-}
-
-.section1 .esg-management .esg-act-list dd b {
-  font-size: 14px;
-  color: #000;
-}
-
-/* **** content 호버시 esg-act-list 노출  **** */
-.section1 .esg-management .esg-act-list {
-  max-width: 0;
-  overflow: hidden;
-  opacity: 0;
-}
-
-.section1 .esg-management .content:hover .esg-act-list {
-  max-width: 800px;
-  overflow: visible;
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.section1 .esg-management .esg-act-list dt,
-.section1 .esg-management .esg-act-list dd {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.5s 0.5s;
-}
-
-.section1 .esg-management .content:hover .esg-act-list dt,
-.section1 .esg-management .content:hover .esg-act-list dd {
-  max-height: 500px;
-  opacity: 1;
 }
 
 /* #### section2 #### */
@@ -519,7 +411,7 @@ header .btn-group {
   font-weight: 700;
 }
 
-.hidden {
+.section2 .hidden {
   height: 0;
   opacity: 0;
 }
